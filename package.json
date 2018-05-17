@@ -1,0 +1,19 @@
+{
+  "name": "5.17-book",
+  "version": "1.0.0",
+  "description": "5.17-book",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luoqi0416/5.17-book.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luoqi0416/5.17-book/issues"
+  },
+  "homepage": "https://github.com/luoqi0416/5.17-book#readme"
+}
