@@ -3,13 +3,115 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src='./js/libs/flexible.js'></script>
     <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/swiper.css">
 </head>
 
 <body>
-    shouye
+    <div class="wrapper">
+        <header>
+            <span class='icon-sign'></span>
+            <div class="tab">
+                <span class='active'>书城</span><span>书架</span>
+                <b class="tab-line"></b>
+            </div>
+            <span class="wode"></span>
+        </header>
+        <section>
+            <div class="content swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-page">
+                        <div class='scroll-wrap' up='下拉刷新' down='上拉加载更多'>
+                            <div class="block">
+                                <a href="page/search.html" class='search'>
+                                    <span class='icon-search'></span> 输入书名 / 作者 / 关键字
+                                </a>
+                                <div class="banner swiper-container swiper-no-swiping">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                    <!-- 轮播图渲染 -->
+                                    <script id='swiper' type='text/x-handlebars-template'>
+                                        {{#each this}}
+                                        <div class="swiper-slide">
+                                            <img src="{{this.ad_pic_url}}" alt="{{this.ad_name}}">
+                                        </div>
+                                        {{/each}}
+                                    </script>
+                                </div>
+                                <ul class="list"></ul>
+                                <!-- 分类渲染 -->
+                                <script id='type' type='text/x-handlebars-template'>
+                                    {{#each this}}
+                                    <li>
+                                        <img src="{{type this.ad_copy}}" alt="">{{this.ad_name}}
+                                    </li>
+                                    {{/each}}
+                                </script>
+                                <div class="tit">
+                                    <span>本周最火</span>
+                                </div>
+                                <ul class="count">
+                                </ul>
+
+                                <script id='count' type='text/x-handlebars-template'>
+                                    {{#each this}}
+                                    <li>
+                                        <div><img src="{{this.cover}}" alt="">{{this.title}}</div>
+                                    </li>
+                                    {{/each}}
+                                </script>
+                                <div class="ck">
+                                    查看更多
+                                </div>
+                                <div class="hot">
+                                    <p>重磅推荐<span>推</span></p>
+                                    <p><b>男</b> | <b>女</b></p>
+                                </div>
+                                <div class="hot-inner">
+                                    <ul></ul>
+                                    <script id='list' type='text/x-handlebars-template'>
+                                        {{#each this}}{{#if (if0 @index 0)}} {{else}}{{#if (limit @index)}}
+                                        <li><span>0{{addIndex @index}}</span>
+                                            <h4>{{this.title}}</h4>
+                                            <p>{{this.authors}}</p>
+                                        </li>
+                                        {{/if}}{{/if}} {{/each}}
+                                    </script>
+                                </div>
+                                <div class="huan">
+                                    <span>换一换</span><span>查看全部</span>
+                                </div>
+                                <h4>女生最爱</h4>
+                                <ul class="lists"></ul>
+                                <!-- <ul class="loadMore"></ul> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-page">
+                        <div class="scroll-wrap1">
+                            <a href="page/search.html">
+                                <div class="search-wrap1">
+                                    <p><span class='icon-search'></span>
+                                        <input type="text" name="" placeholder="输入书名 / 作者 / 关键字     "></p>
+                                    <span class='icon-swicth-list'></span>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src='./js/libs/require.js'></script>
+    <script>
+        require(['./js/main.js'], function() {
+            require(['index']);
+        })
+    </script>
 </body>
 
 </html>

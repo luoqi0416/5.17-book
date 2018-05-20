@@ -1,0 +1,21 @@
+<script id='block1' type='text/x-handlebars-template'>
+    {{#each this}}
+    <li>
+        <dl>
+            <dt><img src="{{cover}}">
+                <span class="index">{{addIndex @index}}</span>
+                <span class="status">{{#if this.finish}}完结{{else}}连载{{/if}}</span>
+            </dt>
+            <dd>
+                <h4>{{this.title}}</h4>
+                <p>{{this.authors}}</p>
+                <p>{{this.summary}}</p>
+                <div class="book-h5">
+                    {{#each this.tags}}
+                    <span>{{this}}</span> {{/each}}
+                </div>
+            </dd>
+        </dl>
+    </li>
+    {{/each}}
+</script>

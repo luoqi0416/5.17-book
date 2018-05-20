@@ -1,0 +1,137 @@
+@import '../common.scss';
+header {
+    width: 100%;
+    height: pxTorem(44px);
+    display: flex;
+    align-items: center;
+    background-color: $header-bg;
+    position: relative;
+    &>span {
+        position: absolute;
+        top: 0;
+        width: pxTorem(44px);
+        height: pxTorem(44px);
+    }
+    &>.icon-sign {
+        left: 0;
+        background: url('../../image/icon-sign.png') center no-repeat;
+        background-size: pxTorem(22px);
+    }
+    &>.wode {
+        right: 0;
+        background: url('../../image/icon-person.png') center no-repeat;
+        background-size: pxTorem(16px);
+    }
+    .tab {
+        display: flex;
+        height: pxTorem(44px);
+        line-height: pxTorem(44px);
+        width: pxTorem(130px);
+        margin: 0 auto;
+        justify-content: space-between;
+        position: relative;
+        font-size: pxTorem($fz14);
+        span {
+            width: pxTorem(34px);
+            height: pxTorem(34px);
+            text-align: center;
+        }
+        span.active {
+            color: $tab-active-color;
+        }
+        .tab-line {
+            position: absolute;
+            left: 0;
+            bottom: pxTorem(2px);
+            width: pxTorem(34px);
+            height: pxTorem(2px);
+            background: $header-line-bg;
+            transition: left .3s;
+        }
+        .tab-line.active {
+            left: pxTorem(96px);
+        }
+    }
+    &>.icon-back {
+        left: 0;
+        background: url('../../image/icon-back.png') center no-repeat;
+        background-size: pxTorem(22px);
+    }
+    div.search-wrap {
+        flex: 1;
+        display: flex;
+        box-sizing: border-box;
+        height: 63px;
+        margin-left: pxTorem(44px);
+        margin-right: pxTorem(20px);
+        background: #fff;
+        &>.icon-search {
+            width: pxTorem(44px);
+            background: url('../../image/icon-search.png') center no-repeat;
+            background-size: pxTorem(18px);
+            border-right: solid 1px gray;
+        }
+        input {
+            flex: 1;
+            text-indent: pxTorem(10px);
+        }
+        .search-btn {
+            width: pxTorem(44px);
+            line-height: 60px;
+            text-align: center;
+            border-left: solid 1px gray;
+            color: $gray-color;
+        }
+    }
+}
+
+.search-wrap1 {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    height: 63px;
+    margin: .3rem 0;
+    padding: 0 .4rem;
+    background: #fff;
+    p {
+        width: 100%;
+        border: solid 1px gray;
+        margin-right: .2rem;
+        display: flex;
+        border-radius: pxTorem(4px);
+        .icon-search {
+            width: pxTorem(44px);
+            background: url('../../image/icon-search.png') center no-repeat;
+            background-size: pxTorem(18px);
+        }
+        input {
+            flex: 1;
+            text-indent: pxTorem(10px);
+        }
+    }
+    .icon-swicth-list {
+        width: pxTorem(44px);
+        background: url('../../image/icon-swicth-list.png') center no-repeat;
+        background-size: pxTorem(18px);
+        border: solid 1px gray;
+        border-radius: pxTorem(4px);
+    }
+}
+
+.search {
+    display: flex;
+    margin: pxTorem(18px);
+    width: 87%;
+    margin: .2rem auto;
+    align-items: center;
+    border: solid 1px #ccc;
+    padding: .2rem;
+    color: #ccc;
+    border-radius: pxTorem(5px);
+    &>.icon-search {
+        width: .8rem;
+        height: .6rem;
+        background: url('../../image/icon-search.png') center no-repeat;
+        background-size: pxTorem(16px);
+    }
+}
